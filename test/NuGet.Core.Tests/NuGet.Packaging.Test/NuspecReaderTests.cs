@@ -783,7 +783,6 @@ namespace NuGet.Packaging.Test
             licenseMetadata.Src.Should().Be(null);
         }
 
-
         [Fact]
         public void NuspecReaderTests_LicenseExpressionHasBothAttributes_Throws()
         {

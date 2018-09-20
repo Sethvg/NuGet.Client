@@ -64,5 +64,7 @@ namespace NuGet.Build.Tasks.Pack
         public string WarningsAsErrors { get; set; }
         public IMSBuildItem[] FrameworksWithSuppressedDependencies { get; set; }
         public string SymbolPackageFormat { get; set; }
+        public string PackageLicenseFile { get; set; }
+        public string PackageLicenseExpression { get; set; }
     }
 }
