@@ -25,6 +25,7 @@ namespace NuGet.Packaging.Rules
                 new UnspecifiedDependencyVersionRule(AnalysisResources.UnspecifiedDependencyVersionWarning),
                 new UnrecognizedScriptFileRule(AnalysisResources.UnrecognizedScriptWarning),
                 new PathTooLongRule(AnalysisResources.FilePathTooLongWarning)
+                // Add rules about license not parseable. 
             }
         );
 

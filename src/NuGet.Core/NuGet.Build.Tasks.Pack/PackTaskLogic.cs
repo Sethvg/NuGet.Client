@@ -175,6 +175,7 @@ namespace NuGet.Build.Tasks.Pack
             if (!string.IsNullOrEmpty(request.PackageLicenseExpression) || !string.IsNullOrEmpty(request.PackageLicenseFile))
             {
                 // TODO NK - Do the parser validation here.
+                // I can also use an error code here.
                 builder.LicenseMetadata = new LicenseMetadata(request.PackageLicenseExpression, request.PackageLicenseFile);
             }
 
