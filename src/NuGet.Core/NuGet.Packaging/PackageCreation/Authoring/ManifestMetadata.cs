@@ -328,10 +328,11 @@ namespace NuGet.Packaging
                 yield return String.Format(CultureInfo.CurrentCulture, NuGetResources.Manifest_UriCannotBeEmpty, "ProjectUrl");
             }
 
-            if (RequireLicenseAcceptance && String.IsNullOrWhiteSpace(_licenseUrl))
+            if (RequireLicenseAcceptance && (string.IsNullOrWhiteSpace(_licenseUrl) && LicenseMetadata == null))
             {
                 yield return NuGetResources.Manifest_RequireLicenseAcceptanceRequiresLicenseUrl;
             }
+            // TODO NK - Should the parsing of the nuget license be done here? validation be here or somewhere else.
         }
     }
 }
