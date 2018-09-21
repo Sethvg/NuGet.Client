@@ -4426,6 +4426,8 @@ namespace Proj1
             }
         }
 
+        // TODO NK - Add tests here for self contained packages.
+
         private class PackageDepencyComparer : IEqualityComparer<PackageDependency>
         {
             public bool Equals(PackageDependency x, PackageDependency y)
