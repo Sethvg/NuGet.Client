@@ -127,7 +127,7 @@ namespace NuGet.Build.Tasks.Pack
                 // If packing using a Nuspec file, we don't need to build a PackageBuilder here
                 // as the package builder is built by reading the manifest file later in the code path.
                 // Passing a null package builder for nuspec file code path is perfectly valid.
-                if (string.IsNullOrEmpty(request.NuspecFile)) // TODO NK - notable comment.
+                if (string.IsNullOrEmpty(request.NuspecFile))
                 {
                     packageBuilder = logic.GetPackageBuilder(request);
                 }

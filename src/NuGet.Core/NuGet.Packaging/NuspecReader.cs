@@ -412,6 +412,28 @@ namespace NuGet.Packaging
             return repository;
         }
 
+        //If someone somehow creates a package that has both a LicenseFile and LicenseException, what's the Visual Studio experience.
+        //What if the package expression does not parse?
+        //What does restore do? What does Visual Studio do? 
+
+        //dotnet pack
+        //valid expression
+        //invalid expression
+        //both expression and LicenseFile
+        //license file
+        //license file not present on disk
+        //license file with an ivnalid extensions(each extensions needs to be valid.)
+
+        //nuspec pack.
+
+        //valid expression
+        //invalid expression
+        //both expression and LicenseFile
+        //license file
+        //license file not present on disk
+        //license file with an ivnalid extensions (each extensions needs to be valid.)
+        //convention based license file inclusion.
+        //convention based license file inclusion with duplicates.
 
         public LicenseMetadata GetLicenseMedata()
         {
@@ -420,6 +442,7 @@ namespace NuGet.Packaging
 
             if (licenseNode != null)
             {
+                // The license should maybe be permissive here.
                 var src = licenseNode.Attribute(NuspecUtility.Src)?.Value;
                 var expression = licenseNode.Attribute(NuspecUtility.LicenseExpression)?.Value;
 

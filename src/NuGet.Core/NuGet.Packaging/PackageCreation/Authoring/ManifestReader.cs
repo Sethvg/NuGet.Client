@@ -168,12 +168,6 @@ namespace NuGet.Packaging
 
         private static LicenseMetadata ReadLicenseMetadata(XElement element)
         {
-            if (!element.HasElements)
-            {
-                // TODO NK - Bad error message, but basically if the element exists, we need to 
-                throw new InvalidDataException(string.Format(CultureInfo.CurrentCulture, NuGetResources.Manifest_RequiredElementMissing, element));
-            }
-
             var src = element.Attribute(NuspecUtility.Src)?.Value;
             var expression = element.Attribute(NuspecUtility.LicenseExpression)?.Value;
 
@@ -182,8 +176,9 @@ namespace NuGet.Packaging
 
             if ((expressionHasValue && isSrcNullOrEmpty) || (!expressionHasValue && !expressionHasValue))
             {
-                throw new PackagingException("Invalid nuspec entry. Only file or licensexpression can be specified.");
+                throw new PackagingException(string.Format(CultureInfo.CurrentCulture, NuGetResources.Manifest_LicenseElementMissingAttributes));
             }
+            // TODO NK - verify that the LicenseExpression is valid. Or maybe don't do it here, but just do it later in Pack.
             return new LicenseMetadata(licenseExpression: expression, src: src);
         }
 

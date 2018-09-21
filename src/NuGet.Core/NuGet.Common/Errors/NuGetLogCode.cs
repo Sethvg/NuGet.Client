@@ -586,6 +586,16 @@ namespace NuGet.Common
         NU5029 = 5029,
 
         /// <summary>
+        /// Error_Manifest_LicenseFileNotInNupkg
+        /// </summary>
+        NU5030 = 5030,
+
+        /// <summary>
+        /// Error_Manifest_LicenseFileExtensionIsInvalid
+        /// </summary>
+        NU5031 = 5031,
+
+        /// <summary>
         /// AssemblyOutsideLibWarning
         /// </summary>
         NU5100 = 5100,

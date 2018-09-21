@@ -183,4 +183,14 @@
   <data name="Manifest_PropertyValueReadFailure" xml:space="preserve">
     <value>An error occured while trying to parse the value '{0}' of property '{1}' in the manifest file.</value>
   </data>
+  <data name="Manifest_LicenseElementMissingAttributes" xml:space="preserve">
+    <value>The element 'license' requires exactly one of the 'expression' and 'src' attributes.</value>
+  </data>
+  <data name="Manifest_LicenseFileIsNotInNupkg" xml:space="preserve">
+    <value>The license file '{0}' does not exist in the package.</value>
+    <comment>0 - the license file</comment>
+  </data>
+  <data name="Manifest_LicenseFileExtensionIsInvalid" xml:space="preserve">
+    <value>The license file '{0}' has an invalid extension. Valid options are .txt, .md or none.</value>
+  </data>
 </root>

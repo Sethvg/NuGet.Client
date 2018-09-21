@@ -23,7 +23,7 @@ namespace NuGet.Packaging.Rules {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "15.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    public class AnalysisResources {
+    internal class AnalysisResources {
         
         private static global::System.Resources.ResourceManager resourceMan;
         
@@ -37,7 +37,7 @@ namespace NuGet.Packaging.Rules {
         ///   Returns the cached ResourceManager instance used by this class.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        public static global::System.Resources.ResourceManager ResourceManager {
+        internal static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
                     global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("NuGet.Packaging.Rules.AnalysisResources", typeof(AnalysisResources).GetTypeInfo().Assembly);
@@ -52,7 +52,7 @@ namespace NuGet.Packaging.Rules {
         ///   resource lookups using this strongly typed resource class.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        public static global::System.Globalization.CultureInfo Culture {
+        internal static global::System.Globalization.CultureInfo Culture {
             get {
                 return resourceCulture;
             }
@@ -64,7 +64,7 @@ namespace NuGet.Packaging.Rules {
         /// <summary>
         ///   Looks up a localized string similar to The assembly &apos;{0}&apos; is placed directly under &apos;lib&apos; folder. It is recommended that assemblies be placed inside a framework-specific folder. Move it into a framework-specific folder..
         /// </summary>
-        public static string AssemblyDirectlyUnderLibWarning {
+        internal static string AssemblyDirectlyUnderLibWarning {
             get {
                 return ResourceManager.GetString("AssemblyDirectlyUnderLibWarning", resourceCulture);
             }
@@ -73,7 +73,7 @@ namespace NuGet.Packaging.Rules {
         /// <summary>
         ///   Looks up a localized string similar to The assembly &apos;{0}&apos; is not inside the &apos;lib&apos; folder and hence it won&apos;t be added as a reference when the package is installed into a project. Move it into the &apos;lib&apos; folder if it needs to be referenced..
         /// </summary>
-        public static string AssemblyOutsideLibWarning {
+        internal static string AssemblyOutsideLibWarning {
             get {
                 return ResourceManager.GetString("AssemblyOutsideLibWarning", resourceCulture);
             }
@@ -82,7 +82,7 @@ namespace NuGet.Packaging.Rules {
         /// <summary>
         ///   Looks up a localized string similar to The value &quot;{0}&quot; for {1} is a sample value and should be removed. Replace it with an appropriate value or remove it and rebuild your package..
         /// </summary>
-        public static string DefaultSpecValueWarning {
+        internal static string DefaultSpecValueWarning {
             get {
                 return ResourceManager.GetString("DefaultSpecValueWarning", resourceCulture);
             }
@@ -91,7 +91,7 @@ namespace NuGet.Packaging.Rules {
         /// <summary>
         ///   Looks up a localized string similar to The file &apos;{0}&apos; path, name, or both are too long. Your package might not work without long file path support. Please shorten the file path or file name..
         /// </summary>
-        public static string FilePathTooLongWarning {
+        internal static string FilePathTooLongWarning {
             get {
                 return ResourceManager.GetString("FilePathTooLongWarning", resourceCulture);
             }
@@ -100,7 +100,7 @@ namespace NuGet.Packaging.Rules {
         /// <summary>
         ///   Looks up a localized string similar to The folder &apos;{0}&apos; under &apos;lib&apos; is not recognized as a valid framework name or a supported culture identifier. Rename it to a valid framework name or culture identifier..
         /// </summary>
-        public static string InvalidFrameworkWarning {
+        internal static string InvalidFrameworkWarning {
             get {
                 return ResourceManager.GetString("InvalidFrameworkWarning", resourceCulture);
             }
@@ -109,7 +109,7 @@ namespace NuGet.Packaging.Rules {
         /// <summary>
         ///   Looks up a localized string similar to The file at &apos;{0}&apos; uses the symbol for empty directory &apos;_._&apos;, but it is present in a directory that contains other files. Please remove this file from directories that contain other files..
         /// </summary>
-        public static string InvalidPlaceholderFileWarning {
+        internal static string InvalidPlaceholderFileWarning {
             get {
                 return ResourceManager.GetString("InvalidPlaceholderFileWarning", resourceCulture);
             }
@@ -118,7 +118,7 @@ namespace NuGet.Packaging.Rules {
         /// <summary>
         ///   Looks up a localized string similar to A stable release of a package should not have a prerelease dependency. Either modify the version spec of dependency &quot;{0}&quot; or update the version field in the nuspec..
         /// </summary>
-        public static string InvalidPrereleaseDependencyWarning {
+        internal static string InvalidPrereleaseDependencyWarning {
             get {
                 return ResourceManager.GetString("InvalidPrereleaseDependencyWarning", resourceCulture);
             }
@@ -127,7 +127,7 @@ namespace NuGet.Packaging.Rules {
         /// <summary>
         ///   Looks up a localized string similar to The package version &apos;{0}&apos; uses SemVer 2.0.0 or components of SemVer 1.0.0 that are not supported on legacy clients. Change the package version to a SemVer 1.0.0 string. If the version contains a release label it must start with a letter. This message can be ignored if the package is not intended for older clients..
         /// </summary>
-        public static string LegacyVersionWarning {
+        internal static string LegacyVersionWarning {
             get {
                 return ResourceManager.GetString("LegacyVersionWarning", resourceCulture);
             }
@@ -136,7 +136,7 @@ namespace NuGet.Packaging.Rules {
         /// <summary>
         ///   Looks up a localized string similar to The assembly &apos;lib\{0}&apos; will be ignored when the package is installed after the migration..
         /// </summary>
-        public static string Migrator_AssemblyDirectlyUnderLibWarning {
+        internal static string Migrator_AssemblyDirectlyUnderLibWarning {
             get {
                 return ResourceManager.GetString("Migrator_AssemblyDirectlyUnderLibWarning", resourceCulture);
             }
@@ -145,7 +145,7 @@ namespace NuGet.Packaging.Rules {
         /// <summary>
         ///   Looks up a localized string similar to &apos;content&apos; assets will not be available when the package is installed after the migration..
         /// </summary>
-        public static string Migrator_PackageHasContentFolder {
+        internal static string Migrator_PackageHasContentFolder {
             get {
                 return ResourceManager.GetString("Migrator_PackageHasContentFolder", resourceCulture);
             }
@@ -154,7 +154,7 @@ namespace NuGet.Packaging.Rules {
         /// <summary>
         ///   Looks up a localized string similar to install.ps1 script will be ignored when the package is installed after the migration..
         /// </summary>
-        public static string Migrator_PackageHasInstallScript {
+        internal static string Migrator_PackageHasInstallScript {
             get {
                 return ResourceManager.GetString("Migrator_PackageHasInstallScript", resourceCulture);
             }
@@ -163,7 +163,7 @@ namespace NuGet.Packaging.Rules {
         /// <summary>
         ///   Looks up a localized string similar to XDT transform file &apos;{0}&apos; will not be applied when the package is installed after the migration..
         /// </summary>
-        public static string Migrator_XdtTransformInPackage {
+        internal static string Migrator_XdtTransformInPackage {
             get {
                 return ResourceManager.GetString("Migrator_XdtTransformInPackage", resourceCulture);
             }
@@ -172,7 +172,7 @@ namespace NuGet.Packaging.Rules {
         /// <summary>
         ///   Looks up a localized string similar to The file &apos;{0}&apos; will be ignored by NuGet because it is not directly under &apos;tools&apos; folder. Place the file directly under &apos;tools&apos; folder..
         /// </summary>
-        public static string MisplacedInitScriptWarning {
+        internal static string MisplacedInitScriptWarning {
             get {
                 return ResourceManager.GetString("MisplacedInitScriptWarning", resourceCulture);
             }
@@ -181,7 +181,7 @@ namespace NuGet.Packaging.Rules {
         /// <summary>
         ///   Looks up a localized string similar to The transform file &apos;{0}&apos; is outside the &apos;content&apos; folder and hence will not be transformed during installation of this package. Move it into the &apos;content&apos; folder..
         /// </summary>
-        public static string MisplacedTransformFileWarning {
+        internal static string MisplacedTransformFileWarning {
             get {
                 return ResourceManager.GetString("MisplacedTransformFileWarning", resourceCulture);
             }
@@ -190,7 +190,7 @@ namespace NuGet.Packaging.Rules {
         /// <summary>
         ///   Looks up a localized string similar to An empty folder placeholder file &apos;{0}&apos; is in a non-empty folder and should be removed..
         /// </summary>
-        public static string PlaceholderFileInPackageWarning {
+        internal static string PlaceholderFileInPackageWarning {
             get {
                 return ResourceManager.GetString("PlaceholderFileInPackageWarning", resourceCulture);
             }
@@ -199,7 +199,7 @@ namespace NuGet.Packaging.Rules {
         /// <summary>
         ///   Looks up a localized string similar to The script file &apos;{0}&apos; is outside the &apos;tools&apos; folder and hence will not be executed during installation of this package. Move it into the &apos;tools&apos; folder..
         /// </summary>
-        public static string ScriptOutsideToolsWarning {
+        internal static string ScriptOutsideToolsWarning {
             get {
                 return ResourceManager.GetString("ScriptOutsideToolsWarning", resourceCulture);
             }
@@ -208,7 +208,7 @@ namespace NuGet.Packaging.Rules {
         /// <summary>
         ///   Looks up a localized string similar to The script file &apos;{0}&apos; is not recognized by NuGet and hence will not be executed during installation of this package. Rename it to install.ps1, uninstall.ps1 or init.ps1 and place it directly under &apos;tools&apos;..
         /// </summary>
-        public static string UnrecognizedScriptWarning {
+        internal static string UnrecognizedScriptWarning {
             get {
                 return ResourceManager.GetString("UnrecognizedScriptWarning", resourceCulture);
             }
@@ -217,7 +217,7 @@ namespace NuGet.Packaging.Rules {
         /// <summary>
         ///   Looks up a localized string similar to The version of dependency &apos;{0}&apos; is not specified. Specify the version of dependency and rebuild your package..
         /// </summary>
-        public static string UnspecifiedDependencyVersionWarning {
+        internal static string UnspecifiedDependencyVersionWarning {
             get {
                 return ResourceManager.GetString("UnspecifiedDependencyVersionWarning", resourceCulture);
             }
@@ -226,7 +226,7 @@ namespace NuGet.Packaging.Rules {
         /// <summary>
         ///   Looks up a localized string similar to The file at &apos;{0}&apos; uses the obsolete &apos;WinRT&apos; as the framework folder. Replace &apos;WinRT&apos; or &apos;WinRT45&apos; with &apos;NetCore45&apos;..
         /// </summary>
-        public static string WinRTObsoleteWarning {
+        internal static string WinRTObsoleteWarning {
             get {
                 return ResourceManager.GetString("WinRTObsoleteWarning", resourceCulture);
             }

@@ -481,15 +481,20 @@ namespace NuGet.Packaging
 
         public static void ValidateLicenseFile(IEnumerable<IPackageFile> files, LicenseMetadata licenseMetadata)
         {
-            if(licenseMetadata.Src != null)
+            if (licenseMetadata.Src != null)
             {
-                // TODO NK - Ask Rohit about case sensitivity.
-                // Here I can also validate that the extensions are correct.
-                var count = files.Where(e => e.Path.Equals(licenseMetadata.Src, StringComparison.OrdinalIgnoreCase)).Count();
-                if(count == 0)
+
+                var ext = Path.GetExtension(licenseMetadata.Src);
+                if(ext != null && ext.Equals("txt", StringComparison.OrdinalIgnoreCase) && ext.Equals("md", StringComparison.OrdinalIgnoreCase))
                 {
-                    // new log code.
-                    throw new PackagingException(NuGetLogCode.NU5018,"The license file specified in the metadata does not exist in the package.");
+                    throw new PackagingException(NuGetLogCode.NU5031, string.Format(CultureInfo.CurrentCulture, NuGetResources.Manifest_LicenseFileExtensionIsInvalid, licenseMetadata.Src));
+                    // TODO NK - Here I can also validate that the extensions are correct
+
+                }
+                var count = files.Where(e => e.Path.Equals(licenseMetadata.Src)).Count();
+                if (count == 0)
+                {
+                    throw new PackagingException(NuGetLogCode.NU5030, string.Format(CultureInfo.CurrentCulture, NuGetResources.Manifest_LicenseFileIsNotInNupkg, licenseMetadata.Src));
                 }
             }
         }

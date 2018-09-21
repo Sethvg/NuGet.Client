@@ -40,7 +40,6 @@ namespace NuGet.Packaging.Xml
                 AddElementIfNotNull(elem, ns, "authors", metadata.Authors, authors => string.Join(",", authors));
                 AddElementIfNotNull(elem, ns, "owners", metadata.Owners, owners => string.Join(",", owners));
             }
-
             elem.Add(new XElement(ns + "requireLicenseAcceptance", metadata.RequireLicenseAcceptance));
             if (metadata.DevelopmentDependency)
             {
@@ -86,7 +85,7 @@ namespace NuGet.Packaging.Xml
             elem.Add(GetXElementFromGroupableItemSets(
                 ns,
                 metadata.DependencyGroups,
-                set => set.TargetFramework.IsSpecificFramework ||
+                set => set.TargetFramework.IsSpecificFramework || 
                        set.Packages.Any(dependency => dependency.Exclude.Count > 0 || dependency.Include.Count > 0),
                 set => set.TargetFramework.IsSpecificFramework ? set.TargetFramework.GetFrameworkString() : null,
                 set => set.Packages,
